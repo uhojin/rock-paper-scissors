@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+</body>
+<script>
+
+    function getComputerChoice() {
+        var randomNumber = Math.floor(Math.random() * 3);
+        switch (randomNumber) {
+            case 0:
+                return 'rock';
+            case 1:
+                return 'paper';
+            case 2:
+                return 'scissors';
+        }
+    }
+
+    function getUserChoice() {
+        let userChoice = prompt("rock, paper or scissors?", 'rock');
+        userChoice = userChoice.toLowerCase();
+        if (userChoice === 'rock' || userChoice === 'paper' || userChoice === 'scissors') {
+            return userChoice;
+        } else {
+            console.log('Invalid input!');
+        }
+    }
+
+    function playGame(playerSelection, computerSelection) {
+        if (playerSelection === computerSelection) {
+            return 'It\'s a tie!';
+        }
+        if (playerSelection === 'rock') {
+            if (computerSelection === 'paper') {
+                return "You lose! Paper beats rock.";
+            } else {
+                return "You win! Rock beats scissors.";
+            }
+        }
+        if (playerSelection === 'paper') {
+            if (computerSelection === 'scissors') {
+                return "You lose! Scissors beats paper.";
+            } else {
+                return "You win! Paper beats rock.";
+            }
+        }
+        if (playerSelection === 'scissors') {
+            if (computerSelection === 'rock') {
+                return "You lose! Rock beats scissors.";
+            } else {
+                return "You win! Scissors beats paper.";
+            }
+        }
+    }
+
+    function game() {
+        for (let i = 0; i < 5; i++) {
+            let gameResult = playGame(getUserChoice(), getComputerChoice());
+            console.log(gameResult);
+        }
+        console.log("Game over!");
+    }
+
+</script>
+</html>
