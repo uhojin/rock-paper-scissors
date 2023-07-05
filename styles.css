@@ -1,0 +1,144 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Overall styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    font-family: 'Fira Code', monospace;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem;
+    font-weight: bold;
+    border-bottom: #333 1rem solid;
+    background-color: cornflowerblue;
+  }
+  
+  h1 {
+    font-size: 3em;
+    color: #333;
+  }
+
+  footer {
+    background-color: #333;
+    color: #F9FAF8;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+  }  
+  
+  /* Button styles */
+  button {
+    padding: 12px 24px;
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 33%;
+    border: none;
+    margin-bottom: 1em;
+    cursor: pointer;
+    border: .1em;
+    border-color: whitesmoke;
+    border-style: solid;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 1rem;
+  }
+  
+  button:hover:enabled {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #d9d9d9;
+  }
+  
+  button:hover:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: scale(1);
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .rock:hover, .paper:hover, .scissors:hover {
+    transform: scale(1.1);
+  }
+
+  
+  
+  .reset {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .reset:hover:enabled {
+    box-shadow: none;
+  }
+  
+  /* Info section styles */
+  #info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+  }
+
+  #info div {
+    margin-bottom: 1rem;
+  }
+
+  #winner {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  #scoreboard {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  
+  score {
+    font-weight: bold;
+  }
+  
+  #result {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  
